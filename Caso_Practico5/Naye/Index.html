@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Cute+Font&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EA9306;
+  margin: 0;
+  font-family: 'Cute Font', cursive;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  color: #fff;
+  letter-spacing: 1px; 
+  text-align: center;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+.container {
+  background-color: #53119E;
+/*   width: 70vw; */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  flex-wrap: wrap;  
+  border-radius: 10px;
+  box-shadow: 8px 8px 8px #114D99, -8px -8px 8px #114D99, 8px -8px 8px #114D99, -8px 8px 8px #114D99;
+  
+}
+
+.images, .buttons  {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;   
+  flex-wrap: wrap; 
+  width: 100%;  
+}
+
+#dog-img, #cat-img {
+  background-color: #fff;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+}
+
+#dog-img img, #cat-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+}
+
+#btn-dog, #btn-cat {
+  margin: 10px;
+  padding: 2px 12px;
+  border-radius: 5px;
+  outline: none;  
+  font-family: inherit;
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #114D99;
+}
+
+#btn-dog:hover, #btn-cat:hover {
+  background-color: #EA9306;
+  transform: scale(1.2);
+}
+
+#btn-dog:active, #btn-cat:active {
+  transform: scale(.9);
+}
+
+@media only screen and (max-width: 590px) {
+  .header {
+    font-size: 20px;
+  }
+  #dog-img, #cat-img {
+    background-color: #fff;    
+    width: 200px;
+    height: 200px;
+  }
+}
+</style>
+<body>
+    <div class='header'>
+        <h1>Gnerador de Imagenes Aleatorias!</h1>
+      </div>
+      <div class="container">
+            <script src="ApiConsumer.js" type="module"></script>
+        <div class='images'>
+          <div id='dog-img'>
+            <p>Placeholder Image</p>
+          </div>
+          <div id='cat-img'>
+            <p>Placeholder Image</p>
+          </div>  
+        </div>
+      
+        <div class='buttons'>
+          <button id='btn-dog'>Random DOG!</button> 
+          <button id='btn-cat'>Random CAT!</button> 
+        </div>   
+      </div>
+</body>
+</html>
